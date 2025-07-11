@@ -9,7 +9,7 @@ import { readContract } from "@wagmi/core"
 
 export default function AirdropForm() {
     const [tokenAddress, setTokenAddress] = useState("")
-    const [recepients, setRecepients] = useState("")
+    const [recipients, setRecipients] = useState("")
     const [amounts, setAmounts] = useState("")
     const chainId = useChainId()
     const config = useConfig()
@@ -54,14 +54,14 @@ export default function AirdropForm() {
             <InputField
                 label="Recepients (comma or new line separated"
                 placeholder="0x123...,0x123...,0x123..."
-                value={tokenAddress}
-                onChange={e => setRecepients(e.target.value)}
+                value={recipients}
+                onChange={e => setRecipients(e.target.value)}
                 large={true}
             />
             <InputField
                 label="Amounts (wei; comma or new line separated"
                 placeholder="100,200,300"
-                value={tokenAddress}
+                value={amounts}
                 onChange={e => setAmounts(e.target.value)}
                 large={true}
             />
